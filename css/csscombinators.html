@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <style>
+            div p{
+                background-color: yellow;
+            }
+            h2{
+                text-align: center;
+                font-family:cursive;
+            }
+            div > p{
+                background-color: lightseagreen;
+            }
+            div+p{
+                background-color: deeppink;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h2>descendant selector</h2>
+        <div>
+            <section>
+            <p>para 1</p>
+            <p>para 2</p>
+            <p>para 3</p>
+            </section>
+        </div>
+        <p>para 4</p>
+        <h2>child selector</h2>
+        <div>
+        <p>para 1</p>
+        <p>para 2</p>
+        <p>para 3</p>
+        <section>para 4</section>
+        <p>para 5</p>
+        </div>
+        <h2>Adjacent sibling selector</h2>
+        <div>
+            <p>para 1</p>
+            <p>para 2</p>
+            <p>para 3</p>
+        </div>
+        <p>para 4</p>
+        <p>para 5</p>
+        <h2>General sibling selector</h2>
+        <div>
+            <p>para 1</p>
+            <p>para 2</p>
+            <p>para 3</p>
+            
+        </div>
+
+    </body>
+</html>

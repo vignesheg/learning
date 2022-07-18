@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <style>
+        a:hover {
+            background-color: darkblue;
+            color: white;
+        }
+        h2{
+            font-family: cursive;
+        }
+
+        a {
+            background-color: blue;
+            padding: 10px 60px;
+            text-decoration: none;
+            border: 2px solid darkblue;
+            border-radius: 5px;
+            color: white;
+            display: inline-block;
+        }
+
+        .highlight:hover {
+            color: #ff0000;
+            font-size: 22px;
+        }
+        #para:hover{
+            color:green;
+            font-size: 22px;
+        }
+        div p{
+            background-color: yellow;
+            display:none;
+            padding: 20px;
+        }
+        div:hover p{
+            display: block;
+        }
+        p i:first-child{
+            color: yellow;
+        }
+        p:first-child i{
+            background-color: blue;
+            color:black;
+        }
+        q:lang(fr){
+            background-color: #ff0000;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Anchor psudo class</h2>
+    <a href="csslessons.html">css</a>
+    <h2>pseudo classes and html classes</h2>
+   <section><p class="highlight">some content</p></section>
+    <p id="para">some content</p>
+    <h2>simple tooltip hover</h2>
+    <div>hover over this element 
+        <section><p>some content</p></section>
+    </div>
+    <br>
+    <h2>css first child</h2>
+    <p>
+        i am so <i>strong</i> i am so strong
+    </p>
+   <section>
+    <p>i am so <i>strong</i><i>strong</i>
+    i am <i>so powerful</i></p>
+   </section>
+  <h2>lang pseudo cl</h2>
+  <p><q lang="fr">some content</q>some content</p>
+</body>
+
+</html>

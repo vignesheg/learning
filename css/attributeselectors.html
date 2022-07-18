@@ -1,0 +1,38 @@
+<html>
+    <head>
+      <style>
+        a[target]{
+            background-color: aqua;
+            color: black;
+        }
+        a[target="html"]{
+          background-color: dodgerblue;
+        }
+        [title~=yell]{
+          background-color: pink;
+        }
+        [class|="top"]{
+          background-color: brown;
+        }
+        [class^="pot"]{
+          background-color:olive;
+        }
+        [class$="est"]{
+          background-color: darkmagenta;
+        }
+        [class*="te"]{
+          background-color: aquamarine;
+        }
+      </style>
+    </head>
+    <body>
+        <a href="#" target="_parent">Hello world</a>
+        <a href="#" target="html">Hello world</a>
+        <a href="#" title="yell">Hello world</a>
+        <a href="#" class="top-bottom">Hello world</a> 
+        <a href="#" class="pottery">hello world</a>
+        <a href="#" class="tall-est">hello world</a>
+        <a href="#" class="dotte">hello world</a>
+
+    </body>
+</html>

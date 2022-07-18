@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <style>
+            h1::first-letter{
+                color: rgb(9, 213, 91);
+            }
+            ::marker{
+                color: blue;
+                font-family: cursive;
+                font-size:25px;
+            }
+            ::selection{
+                background-color: yellow;
+                color: red;
+
+            }
+            p.intro::first-letter{
+                color: red;
+                font-size: 49px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>pseudo elements</h1>
+        <ul style="list-style-type: upper-roman;">
+            <li>hello world</li>
+            <li>hello world</li>
+        </ul>
+        <p class="intro">some content</p>
+        <p>some content</p>
+    </body>
+</html>

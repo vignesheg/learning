@@ -1,0 +1,51 @@
+<html>
+    <head>
+      <style>
+        img{
+            position: absolute;
+            left:0;
+            top:0;
+            z-index: -1;
+        }
+        .container{
+            position: relative;
+            top: 200px;
+        }
+        .blackbox{
+            position: relative;
+            z-index:1 ;
+            border: 2px solid black;
+            height: 100px;
+            margin:30px;
+        }
+        .graybox{
+            position: absolute;
+            z-index: 3;
+            background-color: lightgrey;
+            height:60px;
+            left: 200px;
+            top: 50px;
+            width: 100px;
+        }
+        .greenbox{
+            position: absolute;
+            z-index: 2;
+            background-color: lightgreen;
+            width: 70px;
+            left:270px;
+            top:-15px;
+            height: 100px;
+        }
+      </style>
+    </head>
+    <body>
+        <h1 style="text-align:center;">Z-Index</h1>
+        <img src="images.jpg">
+        <p>the image is behind the</p>
+        <div class="container">
+            <div class="blackbox">black box</div>
+            <div class="graybox">grey box</div>
+            <div class="greenbox">green box</div>
+        </div>
+    </body>
+</html>

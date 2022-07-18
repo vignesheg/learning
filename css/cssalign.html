@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <style>
+        .img2 {
+            float: right;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        h2{
+            text-align: center;font-family: cursive;
+        }
+        .center{
+            line-height: 200px;
+            height: 200px;
+            border:2px solid green;
+            text-align: center;
+            width: 700px;
+            margin-left: 130px;
+        }
+        .centre{
+            height: 200px;
+            position: relative;
+            border: 3px solid green;
+        }
+        .centre p{
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .centere{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            border: 3px solid green;
+        }  
+    </style>
+</head>
+
+<body>
+    <div class="clearfix" style="border:2px solid green">
+        <img class="img2" src="images.jpg" width="170" height="170">
+        some content some content some content some content some content some content some content
+    </div>
+    <h2>Line height property</h2>
+    <div class="center">
+        <p>i am vertically and horizontally centered</p>
+    </div>
+    <h2>center with position and transform</h2>
+    <div class="centre">
+        <p>I am vertically and horizontally centered</p>
+    </div>
+    <h2>centre with flexbox</h2>
+    <div class="centere">
+        I am vertically and horizontally centered
+    </div>
+</body>
+
+</html>

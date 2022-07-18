@@ -1,0 +1,78 @@
+<html>
+
+<head>
+    <style>
+        body {
+            counter-reset: section;
+        }
+
+        h1 {
+            counter-reset: subsection;
+            content: "section" counter(section)".";
+        }
+
+        h1::before {
+            counter-increment: section;
+            content: "Section " counter(section) ". ";
+        }
+
+        h2::before {
+            counter-increment: subsection;
+            content: counter(section) "." counter(subsection) " ";
+        }
+
+        ol {
+  counter-reset: section;
+  list-style-type: none;
+}
+
+li::before {
+  counter-increment: section;
+  content: counters(section,".") " ";
+}
+    </style>
+</head>
+
+<body>
+    <h1>using css counters</h1>
+    <h2>section 1</h2>
+    <h2>section 2</h2>
+    <h2>section 3</h2>
+    <h2> section 4</h2>
+    <h2>section 5</h2>
+
+    <h1>content</h1>
+    <h2>content</h2>
+    <h2>content</h2>
+    <h2>content</h2>
+    <h2>content</h2>
+    <h2>content</h2>
+
+
+    <ol>
+        <li>item</li>
+        <li>item   
+        <ol>
+          <li>item</li>
+          <li>item</li>
+          <li>item
+          <ol>
+            <li>item</li>
+            <li>item</li>
+            <li>item</li>
+          </ol>
+          </li>
+          <li>item</li>
+        </ol>
+        </li>
+        <li>item</li>
+        <li>item</li>
+      </ol>
+      
+      <ol>
+        <li>item</li>
+        <li>item</li>
+      </ol>
+</body>
+
+</html>
