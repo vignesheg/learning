@@ -11,7 +11,7 @@ if(!$conn){
 }
 
 $sql="INSERT INTO studentlist (sno,id,student_name,tamil,english,science,ss,maths)
-     VALUES ('3','13','sanjay','88','87','89','87','88')";
+     VALUES ('4','3','vignesh','88','87','89','87','88')";
 
      if(mysqli_query($conn,$sql)){
         echo "new record created sucessfully. last id:".mysqli_insert_id($conn);
