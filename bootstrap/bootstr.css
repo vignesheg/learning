@@ -1,0 +1,30 @@
+.body{
+    background-color: blueviolet;
+}
+
+.header{
+    
+    color: black;
+    text-align: center;
+}
+
+.bd{
+    display: inline-block;
+}
+
+div ol{
+    list-style-type: none;
+}
+
+div ol li{
+    display: inline;
+    padding: 8px;
+}
+
+.bodyr{
+    min-height: 500px;
+}
+
+.container{
+    border: 1px solid black;
+}

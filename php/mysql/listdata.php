@@ -45,10 +45,10 @@ if(!$conn){
              <td><a href='deletedata.php?id=".$row["id"]."'>delete</td>
              </tr>" ;
  }
-      echo "<td><a href = 'listdata.php'></td>";
+      echo "<tr><td><a href = 'logout.php'>logout</a></td></tr>";
  echo "</table>";
 
 
- session_unset();
+ //session_unset();
  
 ?>

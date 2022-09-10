@@ -28,7 +28,7 @@
 
       $run = mysqli_query($conn , $sql);
       if($run){
-          header('location;listdata.php');
+          echo 'successfully updated';
       }else{
           echo "failed to update record";
       }
