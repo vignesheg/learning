@@ -1,5 +1,5 @@
 <?php
- 
+ob_start();
  session_start();
  
 $server='localhost';
@@ -18,9 +18,7 @@ if(!$conn){
  //var_dump($username);
  if($username == true){
   
- }else{
-  header('location:loginform.php');
- }
+ 
 
  $sql= "SELECT * FROM studentlist";
  $result = mysqli_query($conn , $sql) or die("error $sql");
@@ -46,9 +44,8 @@ if(!$conn){
              </tr>" ;
  }
       echo "<tr><td><a href = 'logout.php'>logout</a></td></tr>";
- echo "</table>";
-
-
- //session_unset();
- 
+ echo "</table>";}else{
+  header('location:log.php');
+ }
+ ob_end_flush();
 ?>

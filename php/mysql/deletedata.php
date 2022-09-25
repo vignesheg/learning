@@ -8,11 +8,7 @@
 
   $sql = "SELECT * FROM studentlist WHERE id = $id";
  echo $sql;
- if($username){
-  
-}else{
- header('location:loginform.php');
-}
+
 
  $sql = "DELETE FROM studentlist WHERE id=$id";
   $run = mysqli_query($conn , $sql);

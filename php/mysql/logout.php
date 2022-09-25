@@ -4,6 +4,6 @@ session_start();;
 
 session_unset();
 
-header('location:loginform.php');
+header('location:log.html');
 
 ?>

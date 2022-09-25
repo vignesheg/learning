@@ -14,13 +14,14 @@ if(!$conn){
 }
 
 
-  if(!isset($_GET['submit'])){
+  if(isset($_POST['submit'])){
+    
 
     $usr = $_POST['usr'];
     $pass=$_POST['pasword'];
    // $gmail = $_POST['gmail'];
        
-    $sql= "SELECT * FROM userlogin WHERE username = '$usr' AND password='$pass'";
+    $sql= "SELECT * FROM studentlist WHERE gmail = '$usr' AND password='$pass'";
     $result = mysqli_query($conn , $sql);
     $resultno = mysqli_num_rows($result);
    // echo $resultno;
@@ -28,12 +29,19 @@ if(!$conn){
 
     if($resultno == 1){
        $_SESSION['usr'] = $usr ;
+       if(isset($_POST['check'])){
+        setcookie('namecookie',$_POST['usr'],time()+3600,'/');
+        setcookie('paswordcookie',$_POST['pasword'],time()+3600,'/');
+       }else{
+        setcookie('namecookie',$_POST['usr'],time()-3600,'/');
+        setcookie('paswordcookie',$_POST['pasword'],time()-3600,'/');
+       }
         header('location:listdata.php');
-    }else{
-        echo "wrong password";
-    }
+
 
   }
-  
+}else{
+    echo "wrong password";}
+
     
 ?>
