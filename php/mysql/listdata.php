@@ -16,7 +16,10 @@ if(!$conn){
 
  $username = $_SESSION["usr"];
  //var_dump($username);
- if($username == true){
+ if($username == true){}
+  else{
+    header('location:log.php');
+   }
   
  
 
@@ -44,8 +47,6 @@ if(!$conn){
              </tr>" ;
  }
       echo "<tr><td><a href = 'logout.php'>logout</a></td></tr>";
- echo "</table>";}else{
-  header('location:log.php');
- }
+ echo "</table>";
  ob_end_flush();
 ?>

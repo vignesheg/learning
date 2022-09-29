@@ -1,7 +1,7 @@
 <?php
-
+ob_start();
  session_start();
-
+ echo "session start";
 $server='localhost';
 $usr='root';
 $pass='';
@@ -9,6 +9,7 @@ $db = "studentsmark";
 
 
 $conn = mysqli_connect($server,$usr,$pass,$db);
+
 if(!$conn){
     die('connection failed:'.mysqli_connect_error());
 }
@@ -21,11 +22,10 @@ if(!$conn){
     $pass=$_POST['pasword'];
    // $gmail = $_POST['gmail'];
        
-    $sql= "SELECT * FROM studentlist WHERE gmail = '$usr' AND password='$pass'";
+    $sql= "SELECT * FROM userlogin WHERE username = '$usr' AND password='$pass'";
     $result = mysqli_query($conn , $sql);
     $resultno = mysqli_num_rows($result);
    // echo $resultno;
-
 
     if($resultno == 1){
        $_SESSION['usr'] = $usr ;
@@ -37,11 +37,10 @@ if(!$conn){
         setcookie('paswordcookie',$_POST['pasword'],time()-3600,'/');
        }
         header('location:listdata.php');
-
-
+  } else{
+    echo "user not found";
   }
 }else{
     echo "wrong password";}
-
-    
+    ob_end_flush();
 ?>
